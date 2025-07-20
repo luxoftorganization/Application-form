@@ -1,0 +1,15 @@
+body { font-family: Arial, sans-serif; margin: 0; background: #f2eaff; color: #333; }
+header { background: #5c2d91; color: white; padding: 30px 20px; text-align: center; }
+.logo { width: 120px; margin-bottom: 10px; }
+.slogan { font-style: italic; margin-top: 5px; }
+.btn { background: white; color: #5c2d91; padding: 10px 20px; text-decoration: none; border-radius: 6px; display: inline-block; margin: 10px; }
+.gallery { display: flex; justify-content: center; gap: 10px; padding: 20px; flex-wrap: wrap; }
+.gallery img { width: 200px; height: auto; border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.1); }
+.benefits { padding: 20px; text-align: center; }
+.benefits ul { list-style: none; padding: 0; }
+.benefits li::before { content: "✔️ "; }
+footer { background: #eee; padding: 10px; text-align: center; }
+.form-page { max-width: 600px; margin: 20px auto; background: white; padding: 20px; border-radius: 10px; }
+form input, form button { width: 100%; padding: 10px; margin: 10px 0; }
+form label { display: block; margin-top: 10px; }
+.thank-you { text-align: center; padding: 100px 20px; }

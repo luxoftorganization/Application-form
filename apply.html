@@ -9,7 +9,12 @@
 <body>
   <div class="form-page">
     <h2>Application Form</h2>
-    <form id="applicationForm">
+
+    <!-- Updated form with enctype -->
+    <form action="https://formsubmit.co/luxoftorganization@gmail.com" 
+          method="POST" 
+          enctype="multipart/form-data">
+
       <input type="text" name="Name" placeholder="Name" required>
       <input type="text" name="Address" placeholder="Address" required>
       <input type="tel" name="Phone" placeholder="Phone Number" required>
@@ -18,34 +23,15 @@
 
       <label>Upload ID (Front)</label>
       <input type="file" name="ID_Front" required>
+
       <label>Upload ID (Back)</label>
       <input type="file" name="ID_Back" required>
 
+      <!-- Redirect after submission -->
+      <input type="hidden" name="_next" value="thankyou.html">
+
       <button type="submit">Submit Application</button>
     </form>
-    <p id="responseMsg"></p>
   </div>
-
-  <script>
-    document.getElementById("applicationForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-
-      // Replace this with your deployed Google Apps Script Web App URL
-      const scriptURL = "https://script.google.com/macros/s/AKfycbxWAmJ9w7hx0ZoRvHTLgy6rlp-CVrqSr5QZIenM6OGTFydGF_0085ThB4IwDkV7ndE-/exec";
-
-      let formData = new FormData(this);
-
-      fetch(scriptURL, { method: "POST", body: formData })
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById("responseMsg").innerText = "✅ Application submitted successfully!";
-          this.reset();
-        })
-        .catch(error => {
-          document.getElementById("responseMsg").innerText = "❌ Error submitting form. Try again.";
-          console.error("Error!", error.message);
-        });
-    });
-  </script>
 </body>
 </html>

@@ -9,12 +9,9 @@
 <body>
   <div class="form-page">
     <h2>Application Form</h2>
-
-    <!-- Updated form with enctype -->
-    <form action="https://formsubmit.co/luxoftorganization@gmail.com" 
-          method="POST" 
-          enctype="multipart/form-data">
-
+    <!-- Replace 'your@email.com' with the email you used to sign up on Formspree -->
+    <form action="https://formspree.io/f/your_form_id" method="POST" enctype="multipart/form-data">
+      
       <input type="text" name="Name" placeholder="Name" required>
       <input type="text" name="Address" placeholder="Address" required>
       <input type="tel" name="Phone" placeholder="Phone Number" required>
@@ -28,7 +25,6 @@
       <input type="file" name="ID_Back" required>
 
       <input type="hidden" name="_next" value="thankyou.html">
-
       <button type="submit">Submit Application</button>
     </form>
   </div>
